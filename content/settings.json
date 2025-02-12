@@ -8,8 +8,8 @@
   },
   "bg_color": "#ffffff",
   "logo": "/img/uploads/logo-festcakes.png",
-  "name": "Festcakes",
-  "short_name": "Festcakes ",
+  "name": "festwines",
+  "short_name": "festwines ",
   "lang": "pt_br",
   "currency": "BRL",
   "mini_logo": "",
@@ -20,6 +20,6 @@
   "secondary_color": "#EF5383",
   "icon": "/img/uploads/logo-festcakes.png",
   "store_id": 51491,
-  "description": "A festcakes surge com uma proposta de entregar uma loja completa em utensílios, acessórios e alimentos para confeitaria. levamos à risca valores que foram desenvolvidos carinhosamente pensando em você. \n\nNosso objetivo é ser a mais próxima, inclusiva, prestativa, sábia e simples. Nossos pilares de trabalho são qualidade, responsabilidade, parceria e confiança. Fruto de uma empresa que tem uma estabilidade no mercado a mais de 40 anos a Festcakes nasce da Festpan Alimentos pra atender você.",
+  "description": "festwines",
   "large_icon": "/img/uploads/logo-festcakes.png"
 }
