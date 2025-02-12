@@ -24,7 +24,7 @@ EcomSearch.dslMiddlewares.push((dsl) => {
       dsl.query.bool.must.forEach((filter) => {
         if (filter.multi_match) {
           const { fields } = filter.multi_match
-          if (Array.isArray(fields)) {s
+          if (Array.isArray(fields)) {
             fields.push('skus')
           }
         }
