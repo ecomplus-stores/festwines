@@ -2,7 +2,7 @@ import * as merge from 'lodash.merge'
 import { price as getPrice } from '@ecomplus/utils'
 import EcomSearch from '@ecomplus/search-engine'
 
-const storeSpec = 'Festcakes'
+const storeSpec = 'Festwines'
 
 const fixCategoryIdsFilter = ({ terms }) => {
   if (
@@ -24,7 +24,7 @@ EcomSearch.dslMiddlewares.push((dsl) => {
       dsl.query.bool.must.forEach((filter) => {
         if (filter.multi_match) {
           const { fields } = filter.multi_match
-          if (Array.isArray(fields)) {
+          if (Array.isArray(fields)) {s
             fields.push('skus')
           }
         }
