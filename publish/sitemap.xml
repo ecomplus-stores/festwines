@@ -30188,6 +30188,36 @@
     </url>
   
     <url>
+      <loc>https://www.festcakes.com.br/p/docile-60off</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/k/docile-60off</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/p/pascoa</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/p/oferta-recheio</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/k/oferta-recheio</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
       <loc>https://www.festcakes.com.br/p/mercearia</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -34616,36 +34646,6 @@
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/p/docile-60off</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/k/docile-60off</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/p/pascoa</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/p/oferta-recheio</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/k/oferta-recheio</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
       <loc>https://www.festcakes.com.br/vapt</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -36386,13 +36386,13 @@
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/admin/index</loc>
+      <loc>https://www.festcakes.com.br/app/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/app/index</loc>
+      <loc>https://www.festcakes.com.br/admin/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
     </url>
