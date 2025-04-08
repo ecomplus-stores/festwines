@@ -59,7 +59,7 @@ jobs:
 
       - name: Cache output
         continue-on-error: true
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .deploy/publish
           key: ${{ hashFiles('.bundles.json') }}-${{ hashFiles('template/p*/**') }}-${{ hashFiles('content/**') }}-${{ steps.isg_state.outputs.rand }}
