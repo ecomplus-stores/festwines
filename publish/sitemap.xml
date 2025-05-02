@@ -2,48 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
-      <loc>https://www.festcakes.com.br/p/docile-60off</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/k/docile-60off</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/p/pascoa</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/p/oferta-recheio</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/k/oferta-recheio</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/p/dia-das-maes</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/k/dia-das-maes</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
       <loc>https://www.festcakes.com.br/p/mercearia</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -4364,19 +4322,19 @@
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/dia_das_maes</loc>
+      <loc>https://www.festcakes.com.br/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/pfkvw/dia_das_maes</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/pfkvw/dia_dos_namorados</loc>
+      <loc>https://www.festcakes.com.br/pfkvw/pfkvw/dia_dos_namorados</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/pfkvw/sao_joao</loc>
+      <loc>https://www.festcakes.com.br/pfkvw/pfkvw/sao_joao</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
@@ -4467,6 +4425,48 @@
   
     <url>
       <loc>https://www.festcakes.com.br/f/sb-doces-e-sobremesas-confeitaria</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/p/docile-60off</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/k/docile-60off</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/p/pascoa</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/p/oferta-recheio</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/k/oferta-recheio</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/p/dia-das-maes</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/k/dia-das-maes</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
@@ -36440,13 +36440,13 @@
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/pages/privacidade</loc>
+      <loc>https://www.festcakes.com.br/pages/sobre-nos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/pages/sobre-nos</loc>
+      <loc>https://www.festcakes.com.br/pages/privacidade</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
