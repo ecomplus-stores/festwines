@@ -30272,48 +30272,6 @@
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/p/docile-60off</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/k/docile-60off</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/p/pascoa</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/p/oferta-recheio</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/k/oferta-recheio</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/p/dia-das-maes</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
-      <loc>https://www.festcakes.com.br/k/dia-das-maes</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
-  
-    <url>
       <loc>https://www.festcakes.com.br/p/mercearia</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -34742,6 +34700,48 @@
     </url>
   
     <url>
+      <loc>https://www.festcakes.com.br/p/docile-60off</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/k/docile-60off</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/p/pascoa</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/p/oferta-recheio</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/k/oferta-recheio</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/p/dia-das-maes</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/k/dia-das-maes</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
       <loc>https://www.festcakes.com.br/vapt</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -36446,13 +36446,13 @@
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/pages/trocas</loc>
+      <loc>https://www.festcakes.com.br/pages/sobre-nos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/pages/sobre-nos</loc>
+      <loc>https://www.festcakes.com.br/pages/trocas</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
