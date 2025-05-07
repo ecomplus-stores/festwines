@@ -36422,6 +36422,30 @@
     </url>
   
     <url>
+      <loc>https://www.festcakes.com.br/pkf/saco-practice-arraia-kraft-com-alca-e-visor-com-10-unidades-ideia</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/pkf/caixa-flor-e-doces-love-com-10-unidades-ideia</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/pkf/cesta-envelope-love-com-5-unidades-ideia</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/pkf/saco-practice-coracoes-com-visor-com-10-unidades-ideia</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
       <loc>https://www.festcakes.com.br/pages/contato</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
@@ -36440,13 +36464,13 @@
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/pages/pagamentos</loc>
+      <loc>https://www.festcakes.com.br/pages/privacidade</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/pages/privacidade</loc>
+      <loc>https://www.festcakes.com.br/pages/pagamentos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -36494,12 +36518,6 @@
     </url>
   
     <url>
-      <loc>https://www.festcakes.com.br/admin/index</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
-    </url>
-  
-    <url>
       <loc>https://www.festcakes.com.br/app/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
@@ -36509,6 +36527,12 @@
       <loc>https://www.festcakes.com.br/maintenance/index</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.festcakes.com.br/admin/index</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
     </url>
   
 </urlset>
