@@ -213,4 +213,21 @@
     --primary:var(--bs-body-color)
   }
 }
-
+.main-nav-menu.style-white .nav-item:hover .item-link .icon, .main-nav-menu.style-white .nav-item.active .item-link .icon,
+.main-nav-menu.style-white .nav-item:hover .item-link, .main-nav-menu.style-white .nav-item.active .item-link{
+  color:#fff;
+  opacity: .8;
+}
+.main-nav-menu{
+  *{text-decoration: none!important;}
+}
+.slider{
+  .swiper-button-next:after,
+  .swiper-button-prev:after{
+    padding: 2rem;
+    font-size: 2rem;
+    color: var(--bs-body-color);
+  }
+  .swiper-button-prev,
+  .swiper-button-next{display: block;}
+}

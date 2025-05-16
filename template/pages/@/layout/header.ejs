@@ -101,7 +101,7 @@ if (header.marketing_stripe && !Array.isArray(header.marketing_stripe)) {
             <% if (contacts.phone) { %>
               <p class="body-small text-main-2">
                 <i class="icon-headphone"></i>
-                <%= _.dictionary('callCenter') || 'Call us for free:' %>
+                Atendimento:
                 <a href="tel:+<%= contacts.phone.replace(/\D/g, '') %>" class="text-primary link-secondary fw-semibold">
                   <%= contacts.phone %>
                 </a>
@@ -230,7 +230,7 @@ if (header.marketing_stripe && !Array.isArray(header.marketing_stripe)) {
         <nav class="main-nav-menu style-white">
           <ul class="nav-list m-0">
             <% categories.forEach(({ slug, name, _id}) => { %>
-              <li class="nav-item <%= slug === _.route.path ? 'active' : '' %> pst-unset">
+              <li class="nav-item <%= slug === _.route.path ? 'active' : '' %> ">
                 <a 
                   href="/<%= slug %>" 
                   class="item-link body-md-2 fw-semibold"
@@ -243,53 +243,73 @@ if (header.marketing_stripe && !Array.isArray(header.marketing_stripe)) {
                 </a>
                 
                 <% if (subcategories.length && hasMegamenu) { %>
-                  <div class="sub-menu-container<%= fullWidthSubmenu ? ' mega-menu' : '' %>">
-                    <% if (fullWidthSubmenu) { %>
-                      <div class="wrapper-sub-menu">
-                    <% } %>
-                    <% const submenuCols = [[], [], [], [], []] %>
-                    <% 
-                      if (isAlphabeticalOrderSubmenu) {
-                        subcategories.sort((a, b) => a.name.localeCompare(b.name))
-                      }
-                      for (let i = 0; i < subcategories.length; i++) {
-                        submenuCols[i % 5].push(subcategories[i])
-                      }
-                    %>
+                <div class="sub-menu-container text-nowrap <%= fullWidthSubmenu ? ' mega-menu' : '' %>">
+                  <% if (fullWidthSubmenu) { %>
+                    <div class="wrapper-sub-menu">
+                  <% } %>
+                  <% 
+                    // Sort subcategories if needed
+                    if (isAlphabeticalOrderSubmenu) {
+                      subcategories.sort((a, b) => a.name.localeCompare(b.name))
+                    }
                     
-                    <% submenuCols.forEach(colSubcategories => { %>
-                      <% if (colSubcategories.length) { %>
-                        <div class="mega-menu-item">
-                          <ul class="menu-list">
-                            <% colSubcategories.forEach(subcategory => { %>
-                              <li>
-                                <a href="/<%= subcategory.slug %>" class="body-md-2 link">
-                                  <span><%= subcategory.name %></span>
-                                </a>
-                                
-                                <% const thirdCategories = _.categories.filter(({ parent }) => parent && parent.slug === subcategory.slug) %>
-                                <% if (thirdCategories.length) { %>
-                                  <ul class="sub-sub-menu">
-                                    <% thirdCategories.forEach(thirdCategory => { %>
-                                      <li>
-                                        <a href="/<%= thirdCategory.slug %>" class="body-md-2 link">
-                                          <%= thirdCategory.name %>
-                                        </a>
-                                      </li>
-                                    <% }) %>
-                                  </ul>
-                                <% } %>
-                              </li>
-                            <% }) %>
-                          </ul>
-                        </div>
-                      <% } %>
-                    <% }) %>
-                    <% if (fullWidthSubmenu) { %>
-                      </div>
-                    <% } %>
-                  </div>
-                <% } %>
+                    // Calculate optimal column count based on minimum 10 items per column
+                    const totalItems = subcategories.length;
+                    const maxColumns = 5; // Maximum number of columns
+                    const minItemsPerColumn = 10; // Minimum items per column
+                    
+                    // Calculate how many columns we actually need
+                    let columnCount = Math.min(maxColumns, Math.ceil(totalItems / minItemsPerColumn));
+                    
+                    // Ensure at least 1 column even if fewer than minItemsPerColumn items
+                    columnCount = Math.max(1, columnCount);
+                    
+                    // Create array of empty column arrays
+                    const submenuCols = Array(columnCount).fill().map(() => []);
+                    
+                    // Calculate items per column (distribute evenly)
+                    const itemsPerColumn = Math.ceil(totalItems / columnCount);
+                    
+                    // Distribute items to columns
+                    for (let i = 0; i < totalItems; i++) {
+                      const columnIndex = Math.floor(i / itemsPerColumn);
+                      submenuCols[columnIndex].push(subcategories[i]);
+                    }
+                  %>
+                  
+                  <% submenuCols.forEach(colSubcategories => { %>
+                    <div class="mega-menu-item">
+                      <ul class="menu-list">
+                        <% colSubcategories.forEach(subcategory => { %>
+                          <li>
+                            <a href="/<%= subcategory.slug %>" class="body-md-2 link">
+                              <span><%= subcategory.name %></span>
+                            </a>
+                            <% if (1 != 1 ){%>
+                            <% const thirdCategories = _.categories.filter(({ parent }) => parent && parent.slug === subcategory.slug) %>
+                            <% if (thirdCategories.length) { %>
+                              <ul class="sub-sub-menu">
+                                <% thirdCategories.forEach(thirdCategory => { %>
+                                  <li>
+                                    <a href="/<%= thirdCategory.slug %>" class="body-md-2 link">
+                                      <%= thirdCategory.name %>
+                                    </a>
+                                  </li>
+                                <% }) %>
+                              </ul>
+                            <% } %>
+                            <%}%>
+                          </li>
+                        <% }) %>
+                      </ul>
+                    </div>
+                  <% }) %>
+                  
+                  <% if (fullWidthSubmenu) { %>
+                    </div>
+                  <% } %>
+                </div>
+              <% } %>
               </li>
             <% }) %>
             
