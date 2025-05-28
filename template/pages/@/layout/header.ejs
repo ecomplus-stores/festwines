@@ -99,7 +99,7 @@ if (header.marketing_stripe && !Array.isArray(header.marketing_stripe)) {
         <div class="col-xl-5 col-4 d-none d-lg-flex align-items-center">
           <div class="header-left">
             <% if (contacts.phone) { %>
-              <p class="body-small text-main-2">
+              <p class="body-small text-main-2 m-0">
                 <i class="icon-headphone"></i>
                 Atendimento:
                 <a href="tel:+<%= contacts.phone.replace(/\D/g, '') %>" class="text-primary link-secondary fw-semibold">
@@ -183,7 +183,7 @@ if (header.marketing_stripe && !Array.isArray(header.marketing_stripe)) {
               
               <!-- Mobile Menu Button -->
               <li class="btn-mobile d-flex d-xl-none align-items-center">
-                <a href="javascript:void(0)" class="mobile-button p-0" onclick="toggleSidenav()">
+                <a href="#mobileMenu" class="mobile-button p-0" data-bs-toggle="offcanvas" aria-controls="mobileMenu">
                   <span></span>
                 </a>
               </li>

@@ -1,10 +1,10 @@
 <% if (_.state.body_html) { %>
-  <section id="product-description" class="product-description my-4 my-lg-5">
+  <section id="product-description" class="product-description ">
     <div class="container">
-      <p class="lead">
+      <!-- <p class="lead">
         <a href="#description" name="description">#</a>
         <%= _.dictionary('productDescription') %>
-      </p>
+      </p> -->
       <div class="html-clearfix">
         <%- _.state.body_html.replace(
           /<img ([^/>]+)?src=['"]([^'"]+)['"]([^/>]+)?\/?>/g,
@@ -12,7 +12,9 @@
         ).replace(
           /<img class="lozad" data-src="([^'"]+)"([^>]+)class=['"]([^'"]+)['"]([^/>]+)?>/g,
           '<img class="lozad $3" data-src="$1" $2 $4>'
-        ) %>
+        ).replace(/<div class="card mb-3">/g, '<div class="tf-sp-4 flat-product-des-list style-2 bg-white">')
+        .replace(/<a([^>]+)class="card-header"/g, '<a$1class="flat-title-tab-product-des"')
+         .replace(/<div([^>]+)class="card-body pb-0"/g, '<div$1class="tab-main tab-des"') %>
       </div>
     </div>
   </section>

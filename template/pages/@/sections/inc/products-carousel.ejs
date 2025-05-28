@@ -19,7 +19,7 @@
   %>
 
   <section
-    class="products-carousel container"
+    class="products-carousel <%= _.pageName == 'products'  ? 'containe' : 'container' %>"
     data-size="<%= opt.items.length %>"
     <% if (opt.collection) { %>
       data-collection-id="<%= opt.collection._id %>"

@@ -12,6 +12,9 @@ module.exports = () => ({
 
 
       './html/ProductCard.html': path.resolve(__dirname, 'template/alpix/html/ProductCard.html'),
+      './html/QuantitySelector.html': path.resolve(__dirname, 'template/alpix/html/QuantitySelector.html'),
+      './html/CartQuickview.html': path.resolve(__dirname, 'template/alpix/html/CartQuickview.html'),
+      './js/ProductGallery.js': path.resolve(__dirname, 'template/alpix/js/ProductGallery.js'),
       //'./js/ProductCard.js': path.resolve(__dirname, 'template/alpix/js/ProductCard.js'),
       // '../../storefront-twbs/scss/_reboot.scss': path.resolve(__dirname, 'template/alpix/reboot.scss'),
     }
