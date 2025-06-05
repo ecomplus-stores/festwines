@@ -46,6 +46,10 @@ export default {
   },
 
   props: {
+    grid:{
+      type: String,
+      default: 'col-md-4'
+    },
     product: Object,
     productId: String,
     isSmall: Boolean,

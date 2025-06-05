@@ -12,7 +12,10 @@
     :data-product-id="body._id"
     :data-sku="body.sku"
     :data-block-type="'card'"
+    :data-grid="grid"
+
   >
+
     <!-- <transition :enter-active-class="fadeInLeft"> -->
       <section v-if="!isLoading">
         <div class="card-product-wrapper">

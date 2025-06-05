@@ -2,7 +2,8 @@ import * as merge from 'lodash.merge'
 import { price as getPrice } from '@ecomplus/utils'
 import EcomSearch from '@ecomplus/search-engine'
 
-const storeSpec = 'Festwines'
+// const storeSpec = 'Festwines'
+const storeSpec = 'Festcakes'
 
 const fixCategoryIdsFilter = ({ terms }) => {
   if (
