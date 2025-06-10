@@ -79,7 +79,7 @@
               <!-- item 1 -->
               
           <% for (let i = 0; i < opt.items.length; i++) { %>
-            <% if (!opt.items[i].slug || !/^\w*k\w*\//.test(opt.items[i].slug)) continue %>
+            <% if (!opt.items[i].slug || !/^\w*w\w*\//.test(opt.items[i].slug)) continue %>
             <div class="swiper-slide">
               <%- await include('@/sections/inc/product-item', {
                 _, opt: { item: opt.items[i], type:'horizontal' }

@@ -24,8 +24,8 @@ if (resource || collection) {
   const { body, content } = await _.resolveRoute()
   _.state = Object.assign({}, body || content, _.state)
 }
-_.categories = _.categories.filter(({ slug }) => /^\w*k\w*\//.test(slug))
-_.items = _.items.filter(({ slug }) => /^\w*k\w*\//.test(slug))
+_.categories = _.categories.filter(({ slug }) => /^\w*w\w*\//.test(slug))
+_.items = _.items.filter(({ slug }) => /^\w*w\w*\//.test(slug))
 
 // preset global list of active widgets
 _.widgets = []
