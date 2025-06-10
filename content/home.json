@@ -52,6 +52,14 @@
       ]
     },
     {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/600x200.svg"
+        }
+      ]
+    },
+    {
       "type": "info-bar",
       "enabled": false
     },
