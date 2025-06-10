@@ -103,7 +103,7 @@ globalThis.ecomClientAxiosMidd = async (config) => {
 
 exports.ssr = functions.https.onRequest((req, res) => {
   // const chChar = 'w'
-  const chChar = 'k'
+  const chChar = 'w'
   if (
     req.path.length > 1
     && !req.path.startsWith('/app/')
