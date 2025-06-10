@@ -56,24 +56,26 @@
       "enabled": false
     },
     {
-      "type": "collection-shelf",
-      "shuffle": true,
-      "collection_id": "68475391578b5f7954384682:categories:Vinho Tinto:/w/vinho-tinto",
-      "sort": "offers",
+      "page": 1,
+      "grid_type": "Horizontal",
       "title": "Vinhos Tintos",
+      "shuffle": true,
       "headless": false,
+      "type": "collection-shelf",
       "limit": 12,
-      "page": 1
+      "collection_id": "68475391578b5f7954384682:categories:Vinho Tinto:/w/vinho-tinto",
+      "sort": "offers"
     },
     {
-      "type": "collection-shelf",
-      "shuffle": true,
-      "limit": 12,
-      "page": 1,
-      "sort": "sales",
-      "title": "Vinhos Brancos",
       "autoplay": "",
-      "collection_id": "6847545d578b5f7954384793:categories:Vinho Branco:/w/vinho-branco"
+      "page": 1,
+      "grid_type": "Mosaico",
+      "title": "Vinhos Brancos",
+      "shuffle": true,
+      "type": "collection-shelf",
+      "limit": 12,
+      "collection_id": "6847545d578b5f7954384793:categories:Vinho Branco:/w/vinho-branco",
+      "sort": "sales"
     },
     {
       "type": "collection-shelf",
@@ -82,7 +84,19 @@
       "page": 1,
       "title": "Vinhos Rosé",
       "sort": "news",
-      "collection_id": "68475466578b5f79543847a0:categories:Vinho Rosé:/w/vinho-rose"
+      "collection_id": "68475466578b5f79543847a0:categories:Vinho Rosé:/w/vinho-rose",
+      "grid_type": "Horizontal"
+    },
+    {
+      "type": "shelfs-nav",
+      "shuffle": false,
+      "limit": 12,
+      "page": 1,
+      "collection_ids": [
+        "68475391578b5f7954384682:categories:Vinho Tinto:/w/vinho-tinto",
+        "6847545d578b5f7954384793:categories:Vinho Branco:/w/vinho-branco",
+        "68475466578b5f79543847a0:categories:Vinho Rosé:/w/vinho-rose"
+      ]
     }
   ]
 }
