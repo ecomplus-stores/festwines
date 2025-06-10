@@ -19,7 +19,7 @@ module.exports = () => ({
        './html/SearchEngine.html': path.resolve(__dirname, 'template/alpix/html/SearchEngine.html'),
       './js/SearchEngine.js': path.resolve(__dirname, 'template/alpix/js/SearchEngine.js'),
       './js/ProductCard.js': path.resolve(__dirname, 'template/alpix/js/ProductCard.js'),
-      './base-config/sections': path.resolve(__dirname, 'template/alpix/js/sections.js'), 
+      './base-config': path.resolve(__dirname, 'template/js/netlify-cms/base-config'),
       // '../../storefront-twbs/scss/_reboot.scss': path.resolve(__dirname, 'template/alpix/reboot.scss'), 
     } 
   }
