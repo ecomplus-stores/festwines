@@ -1,14 +1,20 @@
 <% if (Array.isArray(opt.banners) && opt.banners.length) { %>
   <% const colSize = Math.ceil(12 / opt.banners.length) %>
-  <div class="banners-grid my-3 my-md-4 my-lg-5">
-    <div class="container">
-      <div class="row">
-        <% for (let i = 0; i < opt.banners.length; i++) { %>
-          <div class="col-12 col-lg-<%= colSize %> mb-3 mb-lg-0">
-            <%- await include('@/sections/inc/banner', { _, opt: opt.banners[i] }) %>
-          </div>
-        <% } %>
+   <section class="tf-sp-7 pt-0">
+      <div class="container">
+        <div class="swiper tf-sw-categories" data-preview="4" data-tablet="3" data-mobile-sm="2"
+          data-mobile="1" data-space-lg="14" data-space-md="15" data-space="15" data-pagination="1"
+          data-pagination-sm="2" data-pagination-md="3" data-pagination-lg="4">
+          <div class="swiper-wrapper">
+              <% for (let i = 0; i < opt.banners.length; i++) { %>
+                <div class="swiper-slide radius-8 overflow-hidden">
+              
+                  <%- await include('@/sections/inc/banner', { _, opt: opt.banners[i] }) %>
+                </div>
+              <% } %>
+            </div>
+          <div class="sw-dot-default sw-pagination-categories justify-content-center"></div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 <% } %>

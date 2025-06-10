@@ -56,6 +56,15 @@
       "banners": [
         {
           "img": "/img/uploads/600x200.svg"
+        },
+        {
+          "img": "/img/uploads/600x200.svg"
+        },
+        {
+          "img": "/img/uploads/600x200.svg"
+        },
+        {
+          "img": "/img/uploads/600x200.svg"
         }
       ]
     },
@@ -65,7 +74,7 @@
     },
     {
       "page": 1,
-      "grid_type": "Horizontal",
+      "grid_type": "Mosaico",
       "title": "Vinhos Tintos",
       "shuffle": true,
       "headless": false,

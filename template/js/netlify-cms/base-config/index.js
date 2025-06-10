@@ -20,6 +20,18 @@ export default options => {
       default: 'Comum',
       options: ['Comum', 'Mosaico', 'Horizontal']
     })
+    collectionShelf.fields.push({
+          label: "Cor do Título",
+          name: "title_color",
+          widget: "color",
+          required:false
+        },)
+    collectionShelf.fields.push({
+          required: false,
+          label: "Cor do Fundo",
+          name: "bg_color",
+          widget: "color"
+        },)
   }
 
   options.sections = sections
