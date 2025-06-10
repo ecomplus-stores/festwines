@@ -14,7 +14,7 @@ export default options => {
     collectionShelf.fields.push({
       label: 'Tipo de estante',
       required: false,
-      name: 'type',
+      name: 'grid_type',
       hint: 'Selecione o tipo de estante que deseja exibir. Mosaico não suporta carrossel de produtos e Horizontal mantem duas linhas de produtos com cards no formato paisagem',
       widget: 'select',
       default: 'Comum',
