@@ -1,25 +1,25 @@
 {
   "domain": "www.festcakes.com.br",
   "currency_symbol": "R$",
-  "primary_color": "#831e5a",
+  "primary_color": "#941635",
   "theme": {
     "bootswatch": "_",
     "custom": "_"
   },
   "bg_color": "#ffffff",
-  "logo": "/img/uploads/logo-festcakes.png",
+  "logo": "/img/uploads/festwine.png",
   "name": "festwines",
   "short_name": "festwines ",
   "lang": "pt_br",
   "currency": "BRL",
   "mini_logo": "",
   "font_family": "Inter",
-  "favicon": "/img/uploads/e677be7c9e.png",
+  "favicon": "/img/uploads/design_sem_nome__30_-removebg-preview.png",
   "icons_font": "line-awesome",
   "country_code": "BR",
-  "secondary_color": "#EF5383",
-  "icon": "/img/uploads/logo-festcakes.png",
+  "secondary_color": "#941635",
+  "icon": "/img/uploads/design-sem-nome-30-.png",
   "store_id": 51491,
   "description": "festwines",
-  "large_icon": "/img/uploads/logo-festcakes.png"
+  "large_icon": "/img/uploads/festwine.png"
 }
