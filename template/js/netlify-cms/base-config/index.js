@@ -65,7 +65,61 @@ export default options => {
       getPages(options),
       getBlogPosts(options),
       getExtraPages(options),
-      getWidgets(options)       
+      getWidgets(options),
+      {
+        label: "[alpix.dev]",
+        name: "alpix",
+        editor: {
+            preview: false
+        },
+        files: [
+           {
+              name: "latest_menu",
+              label: "Menu Rodapé",
+              file: "content/apx_latest_menu.json",
+              fields: [
+                  {
+                    label: "Itens",
+                    name: "latest_menu",
+                    widget: "list",
+                    required: false,
+                    fields: [
+                        {
+                            label: "Texto/Título",
+                            name: "title",
+                            widget: "string"
+                        },
+                        {
+                            label: "URL de destino",
+                            name: "url",
+                            widget: "string"
+                        }
+                    ]
+                }         
+              ]
+          },
+          {
+              name: "newsletter",
+              label: "Newsletter",
+              file: "content/apx_newsletter.json",
+              editor: {
+                  preview: false
+              },
+              fields: [
+                  {
+                      label: "Título",
+                      name: "title",
+                      widget: "string"
+                  },
+                  {
+                      label: "Texto",
+                      name: "description",
+                      widget: "string"
+                  }                          
+              ]
+          },
+        ]
+      }        
     ]
   }
 }

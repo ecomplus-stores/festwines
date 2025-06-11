@@ -1,8 +1,13 @@
 <% if (Array.isArray(opt.banners) && opt.banners.length) { %>
-  <% const colSize = Math.ceil(12 / opt.banners.length) %>
-   <section class="tf-sp-7 pt-0">
+  <% const colSize = Math.ceil(12 / opt.banners.length) 
+  
+   let preview = 4;
+    if (opt.banners.length === 2) preview = 2;
+    else if (opt.banners.length < 4) preview = opt.banners.length;
+    %>
+   <section class="">
       <div class="container">
-        <div class="swiper tf-sw-categories" data-preview="4" data-tablet="3" data-mobile-sm="2"
+        <div class="swiper tf-sw-categories"         data-preview="<%= preview %>"  data-tablet="3" data-mobile-sm="2"
           data-mobile="1" data-space-lg="14" data-space-md="15" data-space="15" data-pagination="1"
           data-pagination-sm="2" data-pagination-md="3" data-pagination-lg="4">
           <div class="swiper-wrapper">

@@ -68,13 +68,12 @@
         }
       ]
     },
-    {
-      "type": "info-bar",
-      "enabled": false
-    },
+    
     {
       "page": 1,
-      "grid_type": "Mosaico",
+      "grid_type": "Comum",
+      "title_color": "#ffffff",
+      "bg_color": "#722858",
       "title": "Vinhos Tintos",
       "shuffle": true,
       "headless": false,
@@ -84,9 +83,47 @@
       "sort": "offers"
     },
     {
-      "autoplay": "",
       "page": 1,
       "grid_type": "Mosaico",
+      "title_color": "#ffffff",
+      "bg_color": "#722858",
+      "title": "Vinhos Tintos",
+      "shuffle": true,
+      "headless": false,
+      "type": "collection-shelf",
+      "limit": 12,
+      "collection_id": "68475391578b5f7954384682:categories:Vinho Tinto:/w/vinho-tinto",
+      "sort": "offers"
+    },
+     {
+      "page": 1,
+      "grid_type": "Horizontal",
+      "title_color": "#ffffff",
+      "bg_color": "#722858",
+      "title": "Vinhos Tintos",
+      "shuffle": true,
+      "headless": false,
+      "type": "collection-shelf",
+      "limit": 12,
+      "collection_id": "68475391578b5f7954384682:categories:Vinho Tinto:/w/vinho-tinto",
+      "sort": "offers"
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/600x200.svg"
+        },
+        {
+          "img": "/img/uploads/600x200.svg"
+        }
+        
+      ]
+    },
+    {
+      "autoplay": "",
+      "page": 1,
+      "grid_type": "Comum",
       "title": "Vinhos Brancos",
       "shuffle": true,
       "type": "collection-shelf",
@@ -112,7 +149,8 @@
       "collection_ids": [
         "68475391578b5f7954384682:categories:Vinho Tinto:/w/vinho-tinto",
         "6847545d578b5f7954384793:categories:Vinho Branco:/w/vinho-branco",
-        "68475466578b5f79543847a0:categories:Vinho Rosé:/w/vinho-rose"
+        "68475466578b5f79543847a0:categories:Vinho Rosé:/w/vinho-rose",
+        "68475391578b5f7954384682:categories:Vinho Tinto:/w/vinho-tinto"
       ]
     }
   ]
