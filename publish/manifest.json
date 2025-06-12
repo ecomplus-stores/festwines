@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.90767631a8b77d2e84ba7415c15e82c9.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.17fb28569307532ee9b5e96325ffe7b0.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.d3e9c42710d34ab18ad44e4882a6fd41.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.1bfcf2124a98c14c8c84c1ec4dab25ca.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.a50463014706eb79e5a96fed85d7937e.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "festwines",
+  "short_name": "festwines ",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "festwines",
+  "background_color": "#ffffff",
+  "theme_color": "#941635"
+}

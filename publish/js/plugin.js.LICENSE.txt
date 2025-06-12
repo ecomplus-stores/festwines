@@ -1,0 +1,15 @@
+/*! FitVids 1.1
+ * Copyright 2011, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+ * Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+ * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+ */
+
+/*! Respond.js v1.3.0
+ * (c) Scott Jehl. MIT/GPLv2 Lic. j.mp/respondjs
+ */
+
+/*! jQuery Easing v1.3
+ * http://gsgd.co.uk/sandbox/jquery/easing/
+ */
+
+/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. Dual MIT/BSD license */
