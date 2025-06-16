@@ -17,10 +17,14 @@ module.exports = () => ({
       './js/ProductGallery.js': path.resolve(__dirname, 'template/alpix/js/ProductGallery.js'),
 
        './html/SearchEngine.html': path.resolve(__dirname, 'template/alpix/html/SearchEngine.html'),
+       './html/ProductQuickview.html': path.resolve(__dirname, 'template/alpix/html/ProductQuickview.html'),
       './js/SearchEngine.js': path.resolve(__dirname, 'template/alpix/js/SearchEngine.js'),
       './js/ProductCard.js': path.resolve(__dirname, 'template/alpix/js/ProductCard.js'),
       './base-config': path.resolve(__dirname, 'template/js/netlify-cms/base-config'),
       // '../../storefront-twbs/scss/_reboot.scss': path.resolve(__dirname, 'template/alpix/reboot.scss'), 
+      './helpers/favorite-products': path.resolve(__dirname, 'template/alpix/js/favorite-products.js'),   
+      './helpers/favorite-products.js': path.resolve(__dirname, 'template/alpix/js/favorite-products.js'),   
+      '@ecomplus/storefront-components/src/js/helpers/favorite-products': path.resolve(__dirname, 'template/alpix/js/favorite-products.js'), 
     } 
   }
 })

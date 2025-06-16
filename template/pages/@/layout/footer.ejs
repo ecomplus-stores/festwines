@@ -4,7 +4,26 @@ const footer = _.cms('footer') || {}
 const contacts = _.cms('contacts') || {}
 const themeCustom = _.settings.theme.custom || ''
 %>
-
+<div id="message-container"></div>
+<div id="favorites-quickview">
+  <div class="backdrop"></div>
+  <aside class="favorites__aside card shadow">
+    <header class="card-header">
+      <div class="row apx-side-heading">
+        <div class="col">
+          <span>Favoritos</span>
+        </div>
+        <div class="col-auto">
+          <button type="button" aria-label="Fechar" class="close" style="opacity:1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></button>
+        </div>
+      </div>
+    </header>
+    <article class="favorites__body card-body">
+    </article>      
+  </aside>
+</div>
 <footer class="tf-footer">
   <div class="ft-body-wrap">
     <div class="ft-body-inner">

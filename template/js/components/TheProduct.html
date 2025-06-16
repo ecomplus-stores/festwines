@@ -53,7 +53,7 @@
         >
           <component
             :is="headingTag"
-            class="product__name"
+            class="product__name h5"
           >
             {{ name }}
           </component>
@@ -118,13 +118,13 @@
                   </div>
                   
                   <!-- Shipping Info -->
-                  <div class="product-delivery">
+                  <!-- <div class="product-delivery">
                     <p class='m-0'>
                       <i class="icon-delivery-2"></i>
                       Frete grátis
                     </p>
                     
-                  </div>
+                  </div> -->
                 </div>
                 
                 <!-- Product Features List -->
@@ -185,7 +185,29 @@
                     </span>
                   </div>
                 </div>
-
+            <slot
+              v-if="!isQuickview && (!isKit || kitItems.length)"
+              name="shipping"
+            >
+              <shipping-calculator
+                :shippedItems="isKit ? kitItems : [{
+                  ...body,
+                  ...selectedVariation,
+                  product_id: body._id,
+                  quantity: qntToBuy || body.min_quantity || 1
+                }]"
+              >
+                <template v-slot:free-from-value="{ amountSubtotal, freeFromValue }">
+                  <div class="product__free-shipping-from">
+                    {{ i19freeShippingFrom }}
+                    <strong>
+                      {{ Math.ceil(freeFromValue / amountSubtotal) }}
+                      {{ i19units }}
+                    </strong>
+                  </div>
+                </template>
+              </shipping-calculator>
+            </slot>
                
               </template>
             </div> <!-- This closing div was missing for tf-product-info-content -->
@@ -196,9 +218,17 @@
           v-if="!isSSR && body.short_description"
           name="short-description"
         >
-          <p class="product__info lead">
-            {{ body.short_description }}
-          </p>
+          <div class="infor-bottom">
+            <h6 class="fw-semibold">Sobre o produto</h6>
+            <ul class="product-about-list">
+              <li>
+                <p class="body-text-3">
+                  {{ body.short_description }}
+                </p>
+              </li>
+            </ul>
+          </div>
+         
         </slot>
       </div>
     </div>

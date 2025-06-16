@@ -60,11 +60,11 @@
             <li class="d-none d-sm-block wishlist">
               <a href="javascript:void(0);" @click="toggleFavorite" class="box-icon btn-icon-action hover-tooltip tooltip-left">
                 <span :class="['icon', 'icon-heart2', isFavorite ? 'active' : '']"></span>
-                <span class="tooltip">{{ i19addToFavorites }}</span>
+                <span class="tooltip">{{ isFavorite ? 'Remover dos Favoritos' : 'Adicionar aos Favoritos' }}</span>
               </a>
             </li>
             <li>
-              <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview btn-icon-action hover-tooltip tooltip-left">
+              <a @click="quickView()" class="box-icon quickview btn-icon-action hover-tooltip tooltip-left">
                 <span class="icon icon-view"></span>
                 <span class="tooltip">Quick View</span>
               </a>

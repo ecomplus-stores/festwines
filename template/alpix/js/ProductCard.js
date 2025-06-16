@@ -181,11 +181,40 @@ export default {
     },
 
     toggleFavorite () {
-      if (this.isLogged) {
+      //if (this.isLogged) {
         this.isFavorite = toggleFavorite(this.body._id, this.ecomPassport)
-      }
+      //}
     },
-
+    quickView(){
+      const product = this.body
+      store({ url: `/products/${product._id}.json` })
+          .then(({ data }) => {
+            const selectFields = ['variations', 'customizations', 'kit_composition']
+            for (let i = 0; i < selectFields.length; i++) {
+              const selectOptions = data[selectFields[i]]
+              //if (selectOptions && selectOptions.length) {
+                return import('@ecomplus/storefront-components/src/ProductQuickview.vue')
+                  .then(quickview => {
+                    new Vue({
+                      render: h => h(quickview.default, {
+                        props: {
+                          product: data
+                        }
+                      })
+                    }).$mount(this.$refs.quickview)
+                  })
+              //}
+            }
+           
+          })
+          .catch(err => {
+            console.error(err)
+            window.location = `/${product.slug}`
+          })
+          .finally(() => {
+            this.isWaitingBuy = false
+          })
+    },
     buy () {
       const product = this.body
       this.$emit('buy', { product })
