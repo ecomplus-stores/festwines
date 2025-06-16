@@ -68,44 +68,43 @@
         }
       ]
     },
-    
     {
+      "bg_color": "#722858",
       "page": 1,
       "grid_type": "Comum",
-      "title_color": "#ffffff",
-      "bg_color": "#722858",
       "title": "Vinhos Tintos",
       "shuffle": true,
       "headless": false,
       "type": "collection-shelf",
       "limit": 12,
       "collection_id": "68475391578b5f7954384682:categories:Vinho Tinto:/w/vinho-tinto",
+      "title_color": "#ffffff",
       "sort": "offers"
     },
     {
+      "bg_color": "#722858",
       "page": 1,
       "grid_type": "Mosaico",
-      "title_color": "#ffffff",
-      "bg_color": "#722858",
       "title": "Vinhos Tintos",
       "shuffle": true,
       "headless": false,
       "type": "collection-shelf",
       "limit": 12,
       "collection_id": "68475391578b5f7954384682:categories:Vinho Tinto:/w/vinho-tinto",
+      "title_color": "#ffffff",
       "sort": "offers"
     },
-     {
+    {
+      "bg_color": "#941635",
       "page": 1,
       "grid_type": "Horizontal",
-      "title_color": "#ffffff",
-      "bg_color": "#722858",
       "title": "Vinhos Tintos",
       "shuffle": true,
       "headless": false,
       "type": "collection-shelf",
       "limit": 12,
       "collection_id": "68475391578b5f7954384682:categories:Vinho Tinto:/w/vinho-tinto",
+      "title_color": "#ffffff",
       "sort": "offers"
     },
     {
@@ -117,7 +116,6 @@
         {
           "img": "/img/uploads/600x200.svg"
         }
-        
       ]
     },
     {
