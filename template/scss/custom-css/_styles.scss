@@ -1386,3 +1386,30 @@ header.header-type-stc{z-index:9999}
       button{height: 36px;}
     }
   }
+
+  .tab-des{
+    p{display: block;width: 100%;}
+  }
+  .flat-title-tab-product-des{border: 0;}
+  .thumbs-default.sticky-top{z-index:1}
+
+  .card-product-wrapper{
+    picture{background: #fff;}
+  }
+
+  .banner-image-product.style-abs.type-abs-2 img{min-height: unset;}
+  .tf-footer .logo-site img{height: auto;}
+
+  @media(max-width:990px){
+    .product-item-mosaic .card-product>section{
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem 1rem 0 1rem;
+    }
+    .card-product .card-product-wrapper img{min-height: 100%;}
+    .product-quickview__header{
+      display: flex;
+      align-items: flex-start;
+    }
+    .product-quickview__body{padding: 0;}
+  }

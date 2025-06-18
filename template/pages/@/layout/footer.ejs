@@ -3,6 +3,9 @@
 const footer = _.cms('footer') || {}
 const contacts = _.cms('contacts') || {}
 const themeCustom = _.settings.theme.custom || ''
+
+const apx_newsletter = _.cms('apx_newsletter') || {}
+const apx_latest_menu = _.cms('apx_latest_menu') || {}
 %>
 <div id="message-container"></div>
 <div id="favorites-quickview">
@@ -192,10 +195,10 @@ const themeCustom = _.settings.theme.custom || ''
           <p class="notice text-white justify-content-xxl-between m-0">
             <span class="main-title fw-semibold">
               <img src="<%= _.assetsPrefix || '' %>/img/mail.svg" alt="">
-              <%= _.dictionary('joinNewsletter') || '10% Off Your First Order' %>
+              <%= apx_newsletter.title || _.dictionary('newsletterTitle') || 'Assine nossa newsletter' %>
             </span>
             <span class="body-text-3">
-              <%= _.dictionary('newsletterInfo') || 'Be the first to know about offers, new products and discounted products' %>
+               <%= apx_newsletter.description || _.dictionary('newsletterTitle') || 'E receba novidades em primeira mão' %>
             </span>
           </p>
           <form 
@@ -205,8 +208,17 @@ const themeCustom = _.settings.theme.custom || ''
             method="post"
           >
             <div class="subscribe-content">
-              <fieldset class="email">
+              <fieldset class="email d-flex gap-2">               
                 <input 
+                  type="text" 
+                  name="name" 
+                  class="subscribe-name type-fs-2" 
+                  placeholder="<%= _.dictionary('namePlaceholder') || 'Enter your name' %>" 
+                  tabindex="0" 
+                  aria-required="true"
+                  required
+                >
+                 <input 
                   type="email" 
                   name="email" 
                   class="subscribe-email type-fs-2" 
@@ -240,9 +252,13 @@ const themeCustom = _.settings.theme.custom || ''
           
           <!-- Bottom Menu -->
           <ul class="ft-menu-list-2 body-text-3 m-0">
-            <li><a href="/search" class="title-sidebar link fw-bold">Novidades</a></li>
-            <li><a href="/search?sort=sales" class="title-sidebar link fw-bold"><%= _.dictionary('bestSellers') %></a></li>
-            
+            <% (apx_latest_menu.latest_menu || []).forEach(item => { %>
+              <li>
+                <a href="<%= item.url %>" class="title-sidebar link fw-bold">
+                  <%= item.title %>
+                </a>
+              </li>
+            <% }) %>
           </ul>
           
           <!-- Copyright -->

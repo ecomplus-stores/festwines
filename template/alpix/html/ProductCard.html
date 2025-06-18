@@ -24,16 +24,17 @@
             :href="`/${body.slug}`"
             :title="name"
           >
+          
             <template v-if="body.pictures && body.pictures.length">
                 <a-picture
-                  class="product-card__pictur "
+                  class="product-card__picture"
                   :class="{
                     'product-card--inactive': body._id && !isActive,
                     'img-hover lazyload': index > 1,
                     'img-hover lazyload': index == 1
                   }"
-                  v-for="(picture, index) in body.pictures.slice(0, 2).reverse()"
-                  v-if="body.pictures.length === 1 || index === 1 || isHovered"
+                  v-for="(picture, index) in body.pictures.slice(0, 2)"
+                 
                   :key="index"
                   :src="picture"
                   :can-calc-height="false"
@@ -57,7 +58,7 @@
                 <span class="tooltip">{{ strBuy }}</span>
               </a>
             </li>
-            <li class="d-none d-sm-block wishlist">
+            <li class="wishlist">
               <a href="javascript:void(0);" @click="toggleFavorite" class="box-icon btn-icon-action hover-tooltip tooltip-left">
                 <span :class="['icon', 'icon-heart2', isFavorite ? 'active' : '']"></span>
                 <span class="tooltip">{{ isFavorite ? 'Remover dos Favoritos' : 'Adicionar aos Favoritos' }}</span>

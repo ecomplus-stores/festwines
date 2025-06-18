@@ -50,40 +50,23 @@ if (mainCategories) {
                 <div class="flat-title-tab-nav-mobile">
                     <ul class="menu-tab-line" role="tablist">
                         <li class="nav-tab-item" role="presentation">
-                            <a href="#main-menu" class="tab-link link fw-semibold active"
-                                data-bs-toggle="tab"><%= _.dictionary('menu') || 'Menu' %></a>
+                            <a href="#category" class="tab-link link fw-semibold active"
+                                data-bs-toggle="tab"><%= _.dictionary('categories') || 'Categories' %></a>
                         </li>
                         <li class="br-line type-vertical bg-line h23"></li>
                         <li class="nav-tab-item" role="presentation">
-                            <a href="#category" class="tab-link link fw-semibold"
-                                data-bs-toggle="tab"><%= _.dictionary('categories') || 'Categories' %></a>
+                            <a href="#main-menu" class="tab-link link fw-semibold "
+                                data-bs-toggle="tab"><%= _.dictionary('menu') || 'Menu' %></a>
                         </li>
+                        
+                        
                     </ul>
                 </div>
                 <div class="tab-content">
                     <!-- Main Menu Tab -->
-                    <div class="tab-pane active show" id="main-menu" role="tabpanel">
+                    <div class="tab-pane" id="main-menu" role="tabpanel">
                         <div class="mb-content-top">
-                            <!-- Search Form -->
-                            <form 
-                              action="/search" 
-                              method="get"
-                              class="form-search"
-                            >
-                                <fieldset>
-                                    <input 
-                                      type="search" 
-                                      name="term" 
-                                      placeholder="<%= _.dictionary('searchProducts') || 'Search for products...' %>" 
-                                      tabindex="2" 
-                                      aria-required="true" 
-                                      required
-                                    >
-                                </fieldset>
-                                <button type="submit" class="button-submit">
-                                    <i class="icon-search"></i>
-                                </button>
-                            </form>
+                            
 
                             <!-- Main Navigation -->
                             <ul class="nav-ul-mb" id="wrapper-menu-navigation">
@@ -92,6 +75,81 @@ if (mainCategories) {
                                     <a href="/" class="mb-menu-link">
                                         <span><%= _.dictionary('home') || 'Home' %></span>
                                     </a>
+                                </li>
+                                <% } %>
+                                <%
+                                const footer = _.cms('footer') || {};
+                                if (
+                                    footer.links_1 &&
+                                    (footer.links_1.list_pages ||
+                                        (footer.links_1.list && footer.links_1.list.find(({ url }) => url)))
+                                ) {
+                                %>
+                                <li class="nav-mb-item">
+                                    <a href="#dropdown-menu-pages" class="collapsed mb-menu-link"
+                                         data-bs-toggle="collapse" aria-expanded="false"
+                                         aria-controls="dropdown-menu-pages">
+                                        <span><%= footer.links_1.title || _.dictionary('pages') %></span>
+                                        <span class="btn-open-sub"></span>
+                                    </a>
+                                    <div id="dropdown-menu-pages" class="collapse">
+                                        <ul class="sub-nav-menu">
+                                            <% if (footer.links_1.list_pages) { %>
+                                                <% (_.cms('pages') || []).forEach(slug => { %>
+                                                    <% const { title } = _.cms(`pages/${slug}`) %>
+                                                    <li>
+                                                        <a href="/pages/<%= slug %>" class="sub-nav-link">
+                                                            <%= title %>
+                                                        </a>
+                                                    </li>
+                                                <% }) %>
+                                            <% } else { %>
+                                                <% footer.links_1.list.forEach(({ url, text }) => { %>
+                                                    <li>
+                                                        <a href="<%= url %>" class="sub-nav-link">
+                                                            <%= text %>
+                                                        </a>
+                                                    </li>
+                                                <% }) %>
+                                            <% } %>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <% } if (
+                                    footer.links_2 &&
+                                    (footer.links_2.list_pages ||
+                                        (footer.links_2.list && footer.links_2.list.find(({ url }) => url)))
+                                ) {
+                                %>
+                                <li class="nav-mb-item">
+                                    <a href="#dropdown-menu-pages" class="collapsed mb-menu-link"
+                                         data-bs-toggle="collapse" aria-expanded="false"
+                                         aria-controls="dropdown-menu-pages">
+                                        <span><%= footer.links_1.title || _.dictionary('pages') %></span>
+                                        <span class="btn-open-sub"></span>
+                                    </a>
+                                    <div id="dropdown-menu-pages" class="collapse">
+                                        <ul class="sub-nav-menu">
+                                            <% if (footer.links_1.list_pages) { %>
+                                                <% (_.cms('pages') || []).forEach(slug => { %>
+                                                    <% const { title } = _.cms(`pages/${slug}`) %>
+                                                    <li>
+                                                        <a href="/pages/<%= slug %>" class="sub-nav-link">
+                                                            <%= title %>
+                                                        </a>
+                                                    </li>
+                                                <% }) %>
+                                            <% } else { %>
+                                                <% footer.links_1.list.forEach(({ url, text }) => { %>
+                                                    <li>
+                                                        <a href="<%= url %>" class="sub-nav-link">
+                                                            <%= text %>
+                                                        </a>
+                                                    </li>
+                                                <% }) %>
+                                            <% } %>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <% } %>
 
@@ -126,17 +184,7 @@ if (mainCategories) {
                                     </div>
                                 </li>
 
-                                <!-- Common Pages -->
-                                <% ['products', 'blog', 'contacts', 'about_us'].forEach(slug => { %>
-                                    <% const page = _.cms(`pages/${slug}`) %>
-                                    <% if (page) { %>
-                                        <li class="nav-mb-item <%= _.route.path === `/${slug}` ? 'active' : '' %>">
-                                            <a href="/<%= slug %>" class="mb-menu-link">
-                                                <span><%= page.title %></span>
-                                            </a>
-                                        </li>
-                                    <% } %>
-                                <% }) %>
+                              
 
                                 <!-- User Account -->
                                 <li class="nav-mb-item">
@@ -148,7 +196,7 @@ if (mainCategories) {
                                 <!-- Cart -->
                                 <li class="nav-mb-item">
                                     <a href="/app/#/cart" class="mb-menu-link">
-                                        <span><%= _.dictionary('cart') || 'Cart' %></span>
+                                        <span>Meu carrinho</span>
                                     </a>
                                 </li>
                             </ul>
@@ -198,8 +246,29 @@ if (mainCategories) {
                     </div>
 
                     <!-- Categories Tab -->
-                    <div class="tab-pane" id="category" role="tabpanel">
+                    <div class="tab-pane  active show" id="category" role="tabpanel">
+                        
                         <div class="mb-content-top">
+                            <!-- Search Form -->
+                            <form 
+                              action="/search" 
+                              method="get"
+                              class="form-search  mb-3"
+                            >
+                                <fieldset>
+                                    <input 
+                                      type="search" 
+                                      name="term" 
+                                      placeholder="<%= _.dictionary('searchProducts') || 'Search for products...' %>" 
+                                      tabindex="2" 
+                                      aria-required="true" 
+                                      required
+                                    >
+                                </fieldset>
+                                <button type="submit" class="button-submit">
+                                    <i class="icon-search"></i>
+                                </button>
+                            </form>
                             <ul class="nav-ul-mb">
                                 <% if (mainCategories) { %>
                                     <% mainCategories.forEach(mainCategory => { %>

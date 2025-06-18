@@ -26,7 +26,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
         <div class="row">
           <!-- Left Column - Product Images -->
           <div class="col-md-6">
-            <div class="tf-product-media-wrap bg-white thumbs-left" id="product-gallery">
+            <div class="tf-product-media-wrap bg-white thumbs-default" id="product-gallery">
               
             </div>
           </div>
@@ -198,4 +198,98 @@ if (_.state.gtin && _.state.gtin[0]) {
     }
   }, 50);
 });
+</script>
+
+
+<section class="tf-sp-4">
+  <div class="container">
+    <div class="flat-animate-tab flat-container bg-white flat-title-tab-product-des r-8" id="product-description-tabs">
+      <div class="flat-title-tab text-center">
+        <ul class="menu-tab-line m-0 p-0 bg-white" role="tablist" id="product-tabs-nav">
+          <!-- Tabs serão injetados aqui via JavaScript -->
+        </ul>
+      </div>
+      <div class="tab-content " id="product-tabs-content">
+        <!-- Conteúdo das abas será injetado aqui via JavaScript -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Variável para armazenar o HTML original da descrição
+      const originalDescription = $('#description').html();
+      
+      if (originalDescription) {
+        // Função para transformar o conteúdo em abas
+        function convertToTabs() {
+          // Limpar as áreas onde inseriremos os novos elementos
+          $('#product-tabs-nav').empty();
+          $('#product-tabs-content').empty();
+          
+          // Encontrar todos os cards no HTML original
+          const cards = $(originalDescription).filter('.card');
+          
+          // Para cada card, criar uma aba
+          cards.each(function(index) {
+            const cardHeader = $(this).find('.card-header');
+            const cardId = cardHeader.attr('href');
+            const tabId = cardId.replace('#', '');
+            const tabTitle = cardHeader.find('span').text();
+            const tabContent = $(this).find('.card-body').html();
+            
+            // Criar aba no nav
+            const isActive = index === 0 ? ' active' : '';
+            const tabNav = `<li class="nav-tab-item" role="presentation">
+              <a href="#tab-${tabId}" class="tab-link product-title fw-semibold${isActive}" data-bs-toggle="tab">${tabTitle}</a>
+            </li>`;
+            
+            // Criar conteúdo da aba
+            const tabPane = `<div class="tab-pane${isActive ? ' active show' : ''}" id="tab-${tabId}" role="tabpanel">
+              <div class="tab-main tab-des px-0 pb-0">
+                ${tabContent}
+              </div>
+            </div>`;
+            
+            // Adicionar elementos ao DOM
+            $('#product-tabs-nav').append(tabNav);
+            $('#product-tabs-content').append(tabPane);
+          });
+          
+          // Se não houver cards, exibir o conteúdo completo
+          if (cards.length === 0) {
+            const tabNav = `<li class="nav-tab-item" role="presentation">
+              <a href="#tab-description" class="tab-link product-title fw-semibold active" data-bs-toggle="tab">Descrição</a>
+            </li>`;
+            
+            const tabPane = `<div class="tab-pane active show" id="tab-description" role="tabpanel">
+              <div class="tab-main tab-des">
+                ${originalDescription}
+              </div>
+            </div>`;
+            
+            $('#product-tabs-nav').append(tabNav);
+            $('#product-tabs-content').append(tabPane);
+          }
+        }
+        
+        // Iniciar a conversão
+        convertToTabs();
+        
+        // Adicionar funcionalidade de mudança de abas
+        $(document).on('click', '.menu-tab-line .tab-link', function(e) {
+          e.preventDefault();
+          const target = $(this).attr('href');
+          
+          // Remover classes active das outras abas
+          $('.menu-tab-line .tab-link').removeClass('active');
+          $('.tab-pane').removeClass('active show');
+          
+          // Adicionar classe active às abas selecionadas
+          $(this).addClass('active');
+          $(target).addClass('active show');
+        });
+      }
+   });
 </script>
