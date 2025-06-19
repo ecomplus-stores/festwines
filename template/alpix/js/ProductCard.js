@@ -211,7 +211,7 @@ export default {
               //}
             }
            
-          })
+          }) 
           .catch(err => {
             console.error(err)
             window.location = `/${product.slug}`
