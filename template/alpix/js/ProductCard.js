@@ -93,7 +93,8 @@ export default {
       isHovered: false,
       isFavorite: false,
       error: '',
-      localType: this.blockType
+      localType: this.blockType,
+      quickViewRunning: false,
     }
   },
 
@@ -187,6 +188,10 @@ export default {
     },
     quickView(){
       const product = this.body
+      if(this.quickViewRunning){
+        return
+      }
+      this.quickViewRunning = true
       store({ url: `/products/${product._id}.json` })
           .then(({ data }) => {
             const selectFields = ['variations', 'customizations', 'kit_composition']
@@ -210,9 +215,11 @@ export default {
           .catch(err => {
             console.error(err)
             window.location = `/${product.slug}`
+            this.quickViewRunning = false
           })
           .finally(() => {
             this.isWaitingBuy = false
+            this.quickViewRunning = false
           })
     },
     buy () {

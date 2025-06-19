@@ -29,6 +29,59 @@ const apx_latest_menu = _.cms('apx_latest_menu') || {}
 </div>
 <footer class="tf-footer">
   <div class="ft-body-wrap">
+    
+    <!-- Newsletter Section -->
+    <div class="ft-body-center bg-gray">
+      <div class="container">
+        <div class="ft-center justify-content-xxl-between">
+          <p class="notice text-white justify-content-xxl-between m-0">
+            <span class="main-title fw-semibold">
+              <img src="<%= _.assetsPrefix || '' %>/img/mail.svg" alt="">
+              <%= apx_newsletter.title || _.dictionary('newsletterTitle') || 'Assine nossa newsletter' %>
+            </span>
+            <span class="body-text-3">
+               <%= apx_newsletter.description || _.dictionary('newsletterTitle') || 'E receba novidades em primeira mão' %>
+            </span>
+          </p>
+          <form 
+            action="javascript:;" 
+            id="newsletter-form" 
+            class="form-newsletter" 
+            method="post"
+          >
+            <div class="subscribe-content">
+              <fieldset class="email d-flex gap-2">               
+                <input 
+                  type="text" 
+                  name="name" 
+                  class="subscribe-name type-fs-2" 
+                  placeholder="<%= _.dictionary('namePlaceholder') || 'Seu nome...' %>" 
+                  tabindex="0" 
+                  aria-required="true"
+                  required
+                >
+                 <input 
+                  type="email" 
+                  name="email" 
+                  class="subscribe-email type-fs-2" 
+                  placeholder="<%= _.dictionary('emailPlaceholder') || 'Seu e-mail...' %>" 
+                  tabindex="0" 
+                  aria-required="true"
+                  required
+                >
+              </fieldset>
+              <div class="button-submit">
+                <button class="subscribe-button tf-btn btn-large hover-shine" type="submit">
+                  <span class="body-md-2 fw-semibold text-white">
+                    <%= _.dictionary('subscribe') || 'Subscribe' %>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="ft-body-inner">
       <div class="container">
         <div class="ft-inner flex-wrap flex-xl-nowrap">
@@ -188,58 +241,6 @@ const apx_latest_menu = _.cms('apx_latest_menu') || {}
       </div>
     </div>
     
-    <!-- Newsletter Section -->
-    <div class="ft-body-center bg-gray">
-      <div class="container">
-        <div class="ft-center justify-content-xxl-between">
-          <p class="notice text-white justify-content-xxl-between m-0">
-            <span class="main-title fw-semibold">
-              <img src="<%= _.assetsPrefix || '' %>/img/mail.svg" alt="">
-              <%= apx_newsletter.title || _.dictionary('newsletterTitle') || 'Assine nossa newsletter' %>
-            </span>
-            <span class="body-text-3">
-               <%= apx_newsletter.description || _.dictionary('newsletterTitle') || 'E receba novidades em primeira mão' %>
-            </span>
-          </p>
-          <form 
-            action="javascript:;" 
-            id="newsletter-form" 
-            class="form-newsletter" 
-            method="post"
-          >
-            <div class="subscribe-content">
-              <fieldset class="email d-flex gap-2">               
-                <input 
-                  type="text" 
-                  name="name" 
-                  class="subscribe-name type-fs-2" 
-                  placeholder="<%= _.dictionary('namePlaceholder') || 'Enter your name' %>" 
-                  tabindex="0" 
-                  aria-required="true"
-                  required
-                >
-                 <input 
-                  type="email" 
-                  name="email" 
-                  class="subscribe-email type-fs-2" 
-                  placeholder="<%= _.dictionary('emailPlaceholder') || 'Enter your email address' %>" 
-                  tabindex="0" 
-                  aria-required="true"
-                  required
-                >
-              </fieldset>
-              <div class="button-submit">
-                <button class="subscribe-button tf-btn btn-large hover-shine" type="submit">
-                  <span class="body-md-2 fw-semibold text-white">
-                    <%= _.dictionary('subscribe') || 'Subscribe' %>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
     
     <!-- Footer Bottom -->
     <div class="ft-body-bottom ">
