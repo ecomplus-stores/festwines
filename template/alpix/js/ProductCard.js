@@ -181,9 +181,9 @@ export default {
       }
     },
 
-    toggleFavorite () {
+    async toggleFavorite () {
       //if (this.isLogged) {
-        this.isFavorite = toggleFavorite(this.body._id, this.ecomPassport)
+        this.isFavorite = await toggleFavorite(this.body._id, this.ecomPassport)
       //}
     },
     quickView(){
@@ -256,7 +256,11 @@ export default {
             this.isWaitingBuy = false
           })
       }
-    }
+    },
+    refreshFavorite() {
+      console.log('refreshFavorite')
+      this.isFavorite = checkFavorite(this.body._id, this.ecomPassport)
+    },
   },
   mounted(){
     if (this.$el && this.$el.dataset) {
@@ -265,6 +269,13 @@ export default {
         this.localType = this.$el.dataset.blockType;        
       }
     }
+    
+    // Adicionar event listeners para detectar hover
+    if (this.$el) {
+      this.$el.addEventListener('mouseenter', this.refreshFavorite);
+      
+    }
+
   },
   created () {
     if (this.product) {

@@ -78,7 +78,7 @@ async function placeFavorites(){
     //console.log('favoriteList',favoriteList,favoriteList.length > 0)
     if(favoriteList && favoriteList.length > 0){
       search.setProductIds(favoriteList).fetch().then(result => {
-        console.log('favorite-search',result)
+        console.log('favorite-search place',result)
         $(`.favorites__body`).empty()
         $.each(result.hits.hits, function(k,i){
           let item = i._source;        
