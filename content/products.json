@@ -12,7 +12,10 @@
         "title": ""
       }
     },
-    
+    {
+      "type": "product-specifications",
+      "enabled": true
+    },
     {
       "type": "product-description",
       "title": "Quem comprou este produto, também comprou:",
