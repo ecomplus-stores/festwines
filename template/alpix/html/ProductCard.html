@@ -34,10 +34,15 @@
                     'img-hover lazyload': index == 1
                   }"
                   v-for="(picture, index) in body.pictures.slice(0, 2)"
-                 
+
                   :key="index"
                   :src="picture"
                   :can-calc-height="false"
+                  :container-breakpoints="{
+                    zoom:null,
+                    big: 900,
+                    normal: 400
+                  }"
                 />
             </template>
             <template v-else>

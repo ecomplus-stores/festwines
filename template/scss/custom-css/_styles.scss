@@ -1434,3 +1434,28 @@ header.header-type-stc{z-index:9999}
       .picture.img-hover{opacity: 1;transition: opacity .3s ease-in-out;}
     }
   }
+
+
+  .product-card__picture{
+      img{
+        max-height: 100%!important;
+      }
+    }
+  #goTop{
+    right: auto;
+    left: 40px;
+  }
+  .card-product .card-product-info{gap:5px}
+
+  #cart-quickview{position: relative;}
+
+.summary__item{
+  picture{
+    border-radius:8px;
+    padding: .5rem;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    aspect-ratio: .7;
+    img{height: 100%;margin: 0 auto;display: block;}
+  }
+}

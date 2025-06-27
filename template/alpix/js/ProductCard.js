@@ -225,12 +225,13 @@ export default {
     buy () {
       const product = this.body
       this.$emit('buy', { product })
-      if (this.canAddToCart) {
+      if (this.canAddToCart && !this.isWaitingBuy) {
         this.isWaitingBuy = true
         store({ url: `/products/${product._id}.json` })
           .then(({ data }) => {
             const selectFields = ['variations', 'customizations', 'kit_composition']
             for (let i = 0; i < selectFields.length; i++) {
+              
               const selectOptions = data[selectFields[i]]
               if (selectOptions && selectOptions.length) {
                 return import('@ecomplus/storefront-components/src/ProductQuickview.vue')
@@ -246,6 +247,7 @@ export default {
               }
             }
             const { quantity, price } = data
+            console.log('buy', data)
             ecomCart.addProduct({ ...product, quantity, price })
           })
           .catch(err => {
