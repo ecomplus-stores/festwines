@@ -64,7 +64,7 @@
               </a>
             </li>
             <li class="wishlist">
-              <a href="javascript:void(0);" @click="toggleFavorite" class="box-icon btn-icon-action hover-tooltip tooltip-left">
+              <a  :href="isLogged ? null : accountUrl" @click="toggleFavorite" class="box-icon btn-icon-action hover-tooltip tooltip-left">
                 <span :class="['icon', 'icon-heart2', isFavorite ? 'active' : '']"></span>
                 <span class="tooltip">{{ isFavorite ? 'Remover dos Favoritos' : 'Adicionar aos Favoritos' }}</span>
               </a>

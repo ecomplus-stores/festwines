@@ -182,9 +182,9 @@ export default {
     },
 
     async toggleFavorite () {
-      //if (this.isLogged) {
+      if (this.isLogged) {
         this.isFavorite = await toggleFavorite(this.body._id, this.ecomPassport)
-      //}
+      }
     },
     quickView(){
       const product = this.body
