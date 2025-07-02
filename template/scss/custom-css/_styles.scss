@@ -1459,3 +1459,10 @@ header.header-type-stc{z-index:9999}
     img{height: 100%;margin: 0 auto;display: block;}
   }
 }
+#page-products{
+  .shipping-calculator__services{
+        max-height: 300px;
+    overflow-y: scroll;
+    width: 100%;
+  }
+}

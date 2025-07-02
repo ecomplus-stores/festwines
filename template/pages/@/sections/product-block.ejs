@@ -99,16 +99,18 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                   <% if (_.state.short_description) { %>
                     <div class="infor-bottom">
                       <h6 class="fw-semibold">Sobre o produto</h6>
-                      <ul class="product-about-list">
+                      <ul class="product-about-list m-0">
                         <li>
-                          <p class="body-text-3">
+                          <p class="body-text-3 m-0">
                             <%= _.state.short_description %>
                           </p>
                         </li>
                       </ul>
                     </div>
                   <% } %>
-
+                  
+                  <div class="shipping"></div>
+                  
                 </div>
               </div>
             </div>
@@ -292,4 +294,19 @@ if (_.state.gtin && _.state.gtin[0]) {
         });
       }
    });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  setTimeout(() => {
+    $('.shipping-calculator').appendTo('.shipping')
+  }, 100);
+  setTimeout(() => {
+    $('.shipping-calculator').appendTo('.shipping')
+  }, 500);
+  setTimeout(() => {
+    $('.shipping-calculator').appendTo('.shipping')
+  }, 1000);
+});
 </script>
