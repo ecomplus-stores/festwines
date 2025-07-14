@@ -69,6 +69,14 @@
       ]
     },
     {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 1,
+      "grid_type": "Comum",
+      "collection_id": "681e02fa578b5f795411f762:collections:Ofertas:/p/ofertas"
+    },
+    {
       "type": "brands-carousel",
       "limit": 24,
       "offset": 0,
