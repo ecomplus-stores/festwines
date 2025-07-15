@@ -4,7 +4,7 @@
     class="product-quantity"
     v-for="item in items"
   >
-    <p class="title body-text-3">
+    <p class="title body-text-3 d-none d-md-block">
       <slot v-bind="{ item }">
         <a-link
           v-if="item.slug"
@@ -14,7 +14,7 @@
         >
           {{ item.name }}
         </a-link>
-        <template v-else>
+        <template class='' v-else>
           Quantidade
         </template>
       </slot>

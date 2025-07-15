@@ -3,6 +3,9 @@ const path = require('path')
 module.exports = () => ({
   resolve: {
     alias: {
+      './html/TheAccount.html': path.resolve(__dirname, 'template/alpix/html/TheAccount.html'),
+      './html/RecommendedItems.html': path.resolve(__dirname, 'template/alpix/html/RecommendedItems.html'),
+      './js/RecommendedItems.js': path.resolve(__dirname, 'template/alpix/js/RecommendedItems.js'),
       './html/APrices.html': path.resolve(__dirname, 'template/js/components/APrices.html'),
       './js/APrices.js': path.resolve(__dirname, 'template/js/components/APrices.js'),
       './html/TheProduct.html': path.resolve(__dirname, 'template/js/components/TheProduct.html'),
@@ -21,6 +24,7 @@ module.exports = () => ({
       './js/SearchEngine.js': path.resolve(__dirname, 'template/alpix/js/SearchEngine.js'),
       './js/ProductCard.js': path.resolve(__dirname, 'template/alpix/js/ProductCard.js'),
       './base-config': path.resolve(__dirname, 'template/js/netlify-cms/base-config'),
+      
       // '../../storefront-twbs/scss/_reboot.scss': path.resolve(__dirname, 'template/alpix/reboot.scss'), 
       // './helpers/favorite-products': path.resolve(__dirname, 'template/alpix/js/favorite-products.js'),   
       // './helpers/favorite-products.js': path.resolve(__dirname, 'template/alpix/js/favorite-products.js'),   

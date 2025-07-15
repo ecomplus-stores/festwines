@@ -84,6 +84,11 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                           <%= _.dictionary('sku') || 'SKU' %>: <%= _.state.sku %>
                         </p>
                       </li>
+                      <li>
+                        <p class="caption text-main-2 m-0">
+                          Estoque: <%= _.state.quantity > 0 ? _.state.quantity + ' unidades' : 'Indisponível' %> 
+                        </p>
+                      </li>
                     </ul>
                   </div>
 
@@ -205,13 +210,14 @@ if (_.state.gtin && _.state.gtin[0]) {
 
 <section class="tf-sp-4">
   <div class="container">
-    <div class="flat-animate-tab flat-container bg-white flat-title-tab-product-des r-8" id="product-description-tabs">
+    <div class="flat-animate-tab flat-title-tab-product-des r-8" id="product-description-tabs">
       <div class="flat-title-tab text-center">
-        <ul class="menu-tab-line m-0 p-0 bg-white" role="tablist" id="product-tabs-nav">
+        <ul class="menu-tab-line m-0 p-0 bg-white px-md-4 py-md-4 r-8 border-gray" role="tablist" id="product-tabs-nav" style="border-radius:8px 8px 0 0; border-bottom:0">
           <!-- Tabs serão injetados aqui via JavaScript -->
         </ul>
       </div>
-      <div class="tab-content " id="product-tabs-content">
+      
+      <div class="tab-content border-gray px-md-4" id="product-tabs-content">
         <!-- Conteúdo das abas será injetado aqui via JavaScript -->
       </div>
     </div>
@@ -244,7 +250,7 @@ if (_.state.gtin && _.state.gtin[0]) {
             // Criar aba no nav
             const isActive = index === 0 ? ' active' : '';
             const tabNav = `<li class="nav-tab-item" role="presentation">
-              <a href="#tab-${tabId}" class="tab-link product-title fw-semibold${isActive}" data-bs-toggle="tab">${tabTitle}</a>
+              <a href="#tab-${tabId}" class="tab-link product-title fw-semibold${isActive}" data-bs-toggle="tab">${tabTitle.toLowerCase()}</a>
             </li>`;
             
             // Criar conteúdo da aba
