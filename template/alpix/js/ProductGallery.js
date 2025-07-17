@@ -19,6 +19,7 @@ import {
 import ecomCart from '@ecomplus/shopping-cart'
 import Glide from '@glidejs/glide'
 import APicture from '@ecomplus/storefront-components/src/APicture.vue'
+import PhotoSwipeLightbox from "./photoswipe-lightbox.esm.min.js";
 
 export default {
   name: 'ProductGallery',
@@ -199,7 +200,158 @@ export default {
       if (this.pswp) {
         this.pswp.close()
       }
-    }
+    },
+    photoswipperLightboxInit(){
+      console.log('photoswipperLightbox')
+      var section_zoom = function () {
+          $(".tf-image-zoom").on("mouseover", function () {
+              $(this).closest(".section-image-zoom").addClass("zoom-active");
+          });
+          $(".tf-image-zoom").on("mouseleave", function () {
+              $(this).closest(".section-image-zoom").removeClass("zoom-active");
+          });
+      };
+
+      var cus_zoom = function () {
+          var image_zoom = function () {
+              var driftAll = document.querySelectorAll(".tf-image-zoom");
+              var pane = document.querySelector(".tf-zoom-main");
+
+              if (matchMedia("only screen and (min-width: 1200px)").matches) {
+                  $(driftAll).each(function (i, el) {
+                      if (!el._drift) {
+                          el._drift = new Drift(el, {
+                              zoomFactor: 2,
+                              paneContainer: pane,
+                              inlinePane: false,
+                              handleTouch: false,
+                              hoverBoundingBox: true,
+                              containInline: true,
+                          });
+                      }
+                  });
+              } else {
+                  $(driftAll).each(function (i, el) {
+                      if (el._drift) {
+                          el._drift.destroy();
+                          el._drift = null;
+                      }
+                  });
+              }
+
+              if (typeof $.fn.magnificPopup !== "undefined") {
+                  $(driftAll).magnificPopup({
+                      type: "image",
+                      gallery: {
+                          enabled: true,
+                      },
+                      zoom: {
+                          enabled: true,
+                      },
+                  });
+              }
+          };
+
+          window.addEventListener("resize", image_zoom);
+          image_zoom();
+      };
+
+      var image_zoom_magnifier = function () {
+          var driftAll = document.querySelectorAll(".tf-image-zoom-magnifier");
+          $(driftAll).each(function (i, el) {
+              new Drift(el, {
+                  zoomFactor: 2,
+                  inlinePane: true,
+                  containInline: false,
+              });
+          });
+      };
+
+      var image_zoom_inner = function () {
+          var driftAll = document.querySelectorAll(".tf-image-zoom-inner");
+          var pane = document.querySelector(".tf-product-zoom-inner");
+          $(driftAll).each(function (i, el) {
+              new Drift(el, {
+                  paneContainer: pane,
+                  zoomFactor: 2,
+                  inlinePane: false,
+                  containInline: false,
+              });
+          });
+      };
+
+      var lightboxswiper = function () {
+          const lightbox = new PhotoSwipeLightbox({
+              gallery: "#gallery-swiper-started",
+              children: "a",
+              pswpModule: PhotoSwipe,
+              bgOpacity: 1,
+              secondaryZoomLevel: 2,
+              maxZoomLevel: 3,
+          });
+          lightbox.init();
+
+          lightbox.on("change", () => {
+              const { pswp } = lightbox;
+              main.slideTo(pswp.currIndex, 0, false);
+          });
+
+          lightbox.on("afterInit", () => {
+              if (main.params.autoplay.enabled) {
+                  main.autoplay.stop();
+              }
+          });
+
+          lightbox.on("closingAnimationStart", () => {
+              const { pswp } = lightbox;
+              main.slideTo(pswp.currIndex, 0, false);
+              if (main.params.autoplay.enabled) {
+                  main.autoplay.start();
+              }
+          });
+      };
+
+      var lightbox = function () {
+          const lightbox = new PhotoSwipeLightbox({
+              gallery: "#gallery-started",
+              children: "a",
+              pswpModule: PhotoSwipe,
+              bgOpacity: 1,
+              secondaryZoomLevel: 2,
+              maxZoomLevel: 3,
+          });
+          lightbox.init();
+      };
+
+      var model_viewer = function () {
+          if ($(".tf-model-viewer").length) {
+              $(".tf-model-viewer-ui-button").on("click", function (e) {
+                  $(this).closest(".tf-model-viewer").find("model-viewer").removeClass("disabled");
+                  $(this).closest(".tf-model-viewer").toggleClass("active");
+              });
+
+              $(".tf-model-viewer-ui").on("dblclick", function (e) {
+                  const modelViewer = $(this).closest(".tf-model-viewer").find("model-viewer")[0];
+
+                  $(this).closest(".tf-model-viewer").find("model-viewer").addClass("disabled");
+                  $(this).closest(".tf-model-viewer").toggleClass("active");
+
+                  if (modelViewer) {
+                      modelViewer.cameraOrbit = "0deg 90deg auto";
+                      // modelViewer.fieldOfView = "45deg";
+                      modelViewer.updateFraming();
+                  }
+              });
+          }
+      };
+      section_zoom();
+      cus_zoom();
+      image_zoom_magnifier();
+      image_zoom_inner();
+      lightboxswiper();
+      lightbox();
+      model_viewer();
+    },
   },
 
   watch: {
@@ -212,12 +364,13 @@ export default {
 
     activeIndex (index) {
       // this.moveSlider(index)
-    }
+    },
+    
   },
 
   mounted () {
     // Swiper integration for thumbs and main gallery (adapted for ProductGallery.html structure)
-    
+   
     
     // const glide = new Glide(this.$refs.glide, this.glideOptions)
     // glide.on('run', () => {
@@ -332,12 +485,14 @@ export default {
           driftAll.forEach(el => {
             if (!el._drift && window.Drift) {
               el._drift = new window.Drift(el, {
-                zoomFactor: 2,
+                zoomFactor: 4,
                 paneContainer: pane,
                 inlinePane: false,
                 handleTouch: false,
                 hoverBoundingBox: true,
                 containInline: true,
+                sourceAttribute: 'data-zoom',
+                inlinePane: 50,
               });
             }
           });
@@ -458,7 +613,8 @@ export default {
             }
         }
       }, 1000)
-    
+    this.photoswipperLightboxInit();
+
   },
 
   beforeDestroy () {

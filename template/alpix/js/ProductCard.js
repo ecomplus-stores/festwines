@@ -262,6 +262,9 @@ export default {
     refreshFavorite() {
       console.log('refreshFavorite')
       this.isFavorite = checkFavorite(this.body._id, this.ecomPassport)
+      setTimeout(() => {        
+        window.updateClientInfo();
+      }, 1000);
     },
   },
   mounted(){

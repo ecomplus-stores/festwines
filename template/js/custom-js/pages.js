@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 async function updateClientInfo(){
 let client = await EcomPassport.ecomPassport.getCustomer();   
+  console.log('updateClientInfo',client)
   if(client.display_name){
     $('[data-client_name]').text(client.display_name);
     $('[data-favorite_count]').text(client.favorites.length || 0);
@@ -69,6 +70,7 @@ let client = await EcomPassport.ecomPassport.getCustomer();
   console.log('client name',client)
 }
 
+window.updateClientInfo = updateClientInfo;
 
 // syncFavorites();
 // placeFavorites();

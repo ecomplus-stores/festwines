@@ -11,7 +11,7 @@
       
       <div v-else class="">
         
-        <div class="container">
+        <div class="container px-0">
           <div class="tf-wishlist">
             <table class="tf-table-wishlist">
               <thead>
@@ -39,7 +39,7 @@
                   <td class="wishlist-item_remove">
                     <i 
                       class="icon-close remove link cs-pointer"
-                      @click="removeFavorite(item._id)"
+                      @click="toggleFavorite(item._id)"
                     ></i>
                   </td>
                   <td class="wishlist-item_image" style="background:#fff">

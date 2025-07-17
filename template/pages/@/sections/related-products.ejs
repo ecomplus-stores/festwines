@@ -1,4 +1,5 @@
-<div class="recommended-products <%= _.pageName == 'products'  ? 'bg-white flat-container mb-5' : '' %>">
+<!-- <div class="recommended-products <%= _.pageName == 'products'  ? 'bg-white flat-container mb-5' : '' %>"> -->
+  <div class="recommended-products <%= _.pageName == 'products'  ? 'mb-5' : '' %>"></div>
   <%- await include('@/sections/inc/recommendations-shelf', {
     _, opt: { ...opt, showcaseType: 'related' }
   }) %>

@@ -62,9 +62,8 @@
             :href="getImg(picture, null, 'big').url"
             target="_blank"
             class="item"
-            :data-pswp-width="picture.width || 600"
-            :data-pswp-height="picture.height || 800"
-        
+            :data-pswp-width="picture['zoom'].size.split('x')[0] || 600"
+            :data-pswp-height="picture['zoom'].size.split('x')[1] || 800"
           >
             <img
               class="tf-image-zoom "

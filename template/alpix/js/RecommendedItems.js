@@ -17,6 +17,7 @@ import { isMobile } from '@ecomplus/storefront-twbs'
 import addIdleCallback from '@ecomplus/storefront-components/src/js/helpers/add-idle-callback'
 import ProductCard from '@ecomplus/storefront-components/src/ProductCard.vue'
 import { toggleFavorite } from '@ecomplus/storefront-components/src/js/helpers/favorite-products'
+import ecomPassport from '@ecomplus/passport-client'
 export default {
   name: 'RecommendedItems',
 
@@ -25,9 +26,15 @@ export default {
   },
 
   props: {
+    ecomPassport: {
+      type: Object,
+      default () {
+        return ecomPassport
+      }
+    },
     pageSize: {
       type: Number,
-      default: !isMobile ? 4 : 2
+      default: 99
     },
     sortOrder: {
       type: String,
@@ -105,10 +112,10 @@ export default {
 
   methods: {
     
-    async toggleFavorite () {
-      if (this.isLogged) {
-        this.isFavorite = await toggleFavorite(this.body._id, this.ecomPassport)
-      }
+    async toggleFavorite (itemId) {
+      console.log('toggleFavorite', itemId)      
+        this.isFavorite = await toggleFavorite(itemId, this.ecomPassport)              
+        this.items = this.items.filter(item => item._id !== itemId)      
     },
     formatMoney,
     fetchItems () {

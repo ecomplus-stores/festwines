@@ -229,8 +229,16 @@
               </li>
             </ul>
           </div>
-         
+
         </slot>
+        <div v-if="isQuickview" class="product-quickview__footer">
+          <a
+            class="product-quickview__btn-redirect btn btn-secondary mx-0"
+            :href="body.slug ? `/${body.slug}` : '#'"
+          >
+            Ver mais detalhes sobre o produto
+          </a>
+        </div>
       </div>
     </div>
   </transition>
