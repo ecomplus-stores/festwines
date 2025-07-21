@@ -53,23 +53,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                     </h5>
                     
                     <ul class="product-info-rate-wrap m-0">
-                      <!-- Star Rating -->
-                      <% if (_.state.reviews && _.state.reviews.rating) { %>
-                        <li class="star-review">
-                          <ul class="list-star">
-                            <% for (let i = 1; i <= 5; i++) { %>
-                              <li>
-                                <i class="icon-star <%= i <= Math.round(_.state.reviews.rating) ? '' : 'text-main-4' %>"></i>
-                              </li>
-                            <% } %>
-                          </ul>
-                          <% if (_.state.reviews.total) { %>
-                            <p class="caption text-main-2">
-                              <%= _.dictionary('reviews') || 'Reviews' %> (<%= _.state.reviews.total %>)
-                            </p>
-                          <% } %>
-                        </li>
-                      <% } %>
+                      
                       
                       <!-- Sales count -->
                       <% if (_.state.sales) { %>
