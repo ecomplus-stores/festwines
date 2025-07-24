@@ -3,10 +3,6 @@
   "meta_description": "Ofertas",
   "sections": [
     {
-      "type": "custom-html",
-      "html": "<!-- Elfsight Spinning Wheel | Untitled Spinning Wheel -->\n<script src=\"https://static.elfsight.com/platform/platform.js\" async></script>\n<div class=\"elfsight-app-9f578de6-c9fb-40ac-81f2-53f2839c85a5\" data-elfsight-app-lazy></div>"
-    },
-    {
       "type": "banner-slider",
       "autoplay": 4000,
       "full_width": true,
