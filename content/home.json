@@ -74,7 +74,8 @@
       "limit": 12,
       "page": 1,
       "grid_type": "Comum",
-      "collection_id": "681e02fa578b5f795411f762:collections:Ofertas:/p/ofertas"
+      "collection_id": "681e02fa578b5f795411f762:collections:Ofertas:/p/ofertas",
+      "sort": "slug"
     },
     {
       "type": "brands-carousel",
