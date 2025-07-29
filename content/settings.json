@@ -1,5 +1,5 @@
 {
-  "domain": "www.festcakes.com.br",
+  "domain": "www.festwine.com.br",
   "currency_symbol": "R$",
   "primary_color": "#941635",
   "theme": {
@@ -8,7 +8,7 @@
   },
   "bg_color": "#ffffff",
   "logo": "/img/uploads/festwine.png",
-  "name": "festwines",
+  "name": "Festwines",
   "short_name": "festwines ",
   "lang": "pt_br",
   "currency": "BRL",
