@@ -28,16 +28,16 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/wine_2025_bnr_categorias_web_vbranco.jpg"
-        },
-        {
-          "img": "/img/uploads/wine_2025_bnr_categorias_web_vespumante.jpg"
+          "img": "/img/uploads/wine_2025_bnr_categorias_web_vtinto.jpg"
         },
         {
           "img": "/img/uploads/wine_2025_bnr_categorias_web_vrose.jpg"
         },
         {
-          "img": "/img/uploads/wine_2025_bnr_categorias_web_vtinto.jpg"
+          "img": "/img/uploads/wine_2025_bnr_categorias_web_vespumante.jpg"
+        },
+        {
+          "img": "/img/uploads/wine_2025_bnr_categorias_web_vbranco.jpg"
         }
       ]
     },
