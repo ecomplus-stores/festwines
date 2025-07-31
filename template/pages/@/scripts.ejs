@@ -48,3 +48,96 @@ if (customCode) {
   %> <%- customCode.html_body %> <%
 }
 %>
+
+<!-- Age Verification Popup JavaScript -->
+<script>
+(function() {
+  'use strict';
+  
+  // Check if user has already verified their age
+  function hasAgeVerification() {
+    return localStorage.getItem('ageVerified') === 'true';
+  }
+  
+  // Set age verification
+  function setAgeVerification() {
+    localStorage.setItem('ageVerified', 'true');
+  }
+  
+  // Show age verification popup
+  function showAgeVerification() {
+    const popup = document.getElementById('age-verification-popup');
+    const body = document.body;
+    
+    if (popup) {
+      popup.style.display = 'flex';
+      body.classList.add('age-verification-active');
+    }
+  }
+  
+  // Hide age verification popup
+  function hideAgeVerification() {
+    const popup = document.getElementById('age-verification-popup');
+    const body = document.body;
+    
+    if (popup) {
+      popup.style.display = 'none';
+      body.classList.remove('age-verification-active');
+    }
+  }
+  
+  // Initialize age verification
+  function initAgeVerification() {
+    // Check if user has already verified their age
+    if (!hasAgeVerification()) {
+      // Show popup after a short delay to ensure page is loaded
+      setTimeout(showAgeVerification, 100);
+    }
+    
+    // Add event listeners
+    const yesButton = document.getElementById('age-yes');
+    const noButton = document.getElementById('age-no');
+    
+    if (yesButton) {
+      yesButton.addEventListener('click', function() {
+        setAgeVerification();
+        hideAgeVerification();
+      });
+    }
+    
+    if (noButton) {
+      noButton.addEventListener('click', function() {
+        // Keep popup visible and prevent interaction
+        // The popup will stay open and block all page interaction
+        console.log('User is under 18 - access denied');
+      });
+    }
+    
+    // Prevent closing popup with escape key or clicking outside
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !hasAgeVerification()) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    // Prevent clicking outside to close
+    const overlay = document.getElementById('age-verification-popup');
+    if (overlay) {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay && !hasAgeVerification()) {
+          e.preventDefault();
+          return false;
+        }
+      });
+    }
+  }
+  
+  // Run initialization when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAgeVerification);
+  } else {
+    initAgeVerification();
+  }
+})();
+</script>

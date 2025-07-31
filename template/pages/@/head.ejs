@@ -44,3 +44,122 @@ if (customCode.css) {
 }
 %>
 <%- customCode.html_head %>
+
+<!-- Age Verification Popup Styles -->
+<style>
+  .age-verification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+  }
+
+  .age-verification-modal {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s ease-out;
+  }
+
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8) translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .age-verification-content h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+
+  .age-verification-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .age-verification-buttons .btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+  }
+
+  .age-verification-buttons .btn-primary {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .age-verification-buttons .btn-primary:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+  }
+
+  .age-verification-buttons .btn-secondary {
+    background-color: #dc3545;
+    color: white;
+  }
+
+  .age-verification-buttons .btn-secondary:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+  }
+
+  .age-verification-buttons .btn:active {
+    transform: translateY(0);
+  }
+
+  /* Prevent scrolling when popup is active */
+  body.age-verification-active {
+    overflow: hidden;
+  }
+
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .age-verification-modal {
+      padding: 30px 20px;
+      margin: 20px;
+    }
+    
+    .age-verification-content h2 {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+    
+    .age-verification-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .age-verification-buttons .btn {
+      width: 100%;
+      padding: 15px 20px;
+    }
+  }
+</style>

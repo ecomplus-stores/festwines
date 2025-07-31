@@ -15,6 +15,19 @@
     data-cms-collection="<%= _.route.collection %>"
   <% } %>
 >
+  <!-- Age Verification Popup -->
+  <div id="age-verification-popup" class="age-verification-overlay" style="display: none;">
+    <div class="age-verification-modal">
+      <div class="age-verification-content">
+        <h2>Você tem mais de 18 anos de idade?</h2>
+        <div class="age-verification-buttons">
+          <button id="age-yes" class="btn btn-primary">Sim</button>
+          <button id="age-no" class="btn btn-secondary">Não</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <%- await include('@/layout/menu') %>
 
   
