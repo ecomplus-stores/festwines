@@ -51,13 +51,6 @@
       "sort": "slug"
     },
     {
-      "type": "brands-carousel",
-      "limit": 24,
-      "offset": 0,
-      "autoplay": 5000,
-      "sort": null
-    },
-    {
       "bg_color": "#722858",
       "page": 1,
       "grid_type": "Comum",
