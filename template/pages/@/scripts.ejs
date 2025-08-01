@@ -107,9 +107,8 @@ if (customCode) {
     
     if (noButton) {
       noButton.addEventListener('click', function() {
-        // Keep popup visible and prevent interaction
-        // The popup will stay open and block all page interaction
-        console.log('User is under 18 - access denied');
+        // Redirect to Festpan website
+        window.location.href = 'https://festpan.com/';
       });
     }
     
