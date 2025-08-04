@@ -233,13 +233,13 @@ if (_.state.gtin && _.state.gtin[0]) {
             
             // Criar aba no nav
             const isActive = index === 0 ? ' active' : '';
-            const tabNav = `<li class="nav-tab-item" role="presentation">
+            const tabNav = `<li class="nav-tab-item" role="presentation" data-id="${tabId}">
               <a href="#tab-${tabId}" class="tab-link product-title fw-semibold${isActive}" data-bs-toggle="tab">${tabTitle.toLowerCase()}</a>
             </li>`;
             
             // Criar conteúdo da aba
             const tabPane = `<div class="tab-pane${isActive ? ' active show' : ''}" id="tab-${tabId}" role="tabpanel">
-              <div class="tab-main tab-des px-0 pb-0">
+              <div class="tab-main tab-des px-md-0 px-3 pb-0">
                 ${tabContent}
               </div>
             </div>`;

@@ -1671,3 +1671,34 @@ header #filterShop2{display:none!important}
       padding: 15px 20px;
     }
   }
+
+
+#product-specs{
+  img{
+    height: 42px;
+  }
+ .spec-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: calc(var(--font-size-sm) * .9);
+}
+  .spec-value{
+    font-size: calc(var(--font-size-sm) * .9);
+    line-height: initial;
+  }
+}
+
+@media(max-width: 990px){
+  .flat-title-tab .product-title {
+    text-transform: capitalize;
+    font-size: 18px;
+    line-height: 24px;
+    padding: .5rem 0 .5rem .5rem;
+  }
+}
+
+[data-id="tamanho"],
+[data-id="regras-gerais"],
+[data-id="ingredientes"]{
+  display: none!important;
+}
