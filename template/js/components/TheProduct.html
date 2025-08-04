@@ -62,18 +62,12 @@
           </p>
           
         </slot>
-
+        
         <component
           :is="isSSR ? 'portal' : 'div'"
           selector="#product-actions"
         >
-          <slot name="rating">
-            <div
-              v-once
-              class="product__rating"
-              :data-sku="body.sku"
-            ></div>
-          </slot>
+          
           <div class='tf-product-info-list d-block w-100'>
             <div class="tf-product-info-content">
               <!-- Unavailable/Out of Stock Alerts -->
