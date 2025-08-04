@@ -3,55 +3,24 @@
   "meta_description": "Ofertas",
   "sections": [
     {
-      "type": "custom-html",
-      "html": "<!-- Elfsight Spinning Wheel | Untitled Spinning Wheel -->\n<script src=\"https://static.elfsight.com/platform/platform.js\" async></script>\n<div class=\"elfsight-app-9f578de6-c9fb-40ac-81f2-53f2839c85a5\" data-elfsight-app-lazy></div>"
-    },
-    {
       "type": "banner-slider",
       "autoplay": 4000,
       "full_width": true,
       "slides": [
         {
-          "start": "",
+          "start": "2025-07-30T19:45:22.942Z",
           "end": "",
-          "img": "/img/uploads/nestle_fevereiro.jpg",
-          "link": "https://www.festcakes.com.br/search?term=nestl%C3%A9&utm_source=site&utm_medium=banner&utm_campaign=parceria_nestle",
-          "alt": "309"
+          "img": "/img/uploads/wine_2025_jul_bnr_institucional_web_01.jpg"
         },
         {
-          "start": "",
+          "start": "2025-07-30T19:45:50.613Z",
           "end": "",
-          "img": "/img/uploads/valentine10off.jpg",
-          "link": "https://www.festcakes.com.br/search?term=Amor++Ideia&utm_source=site&utm_medium=banner&utm_campaign=valentine10off",
-          "alt": "315"
+          "img": "/img/uploads/wine_2025_jul_bnr_institucional_web_02.jpg"
         },
         {
-          "start": "",
+          "start": "2025-07-30T19:46:11.972Z",
           "end": "",
-          "img": "/img/uploads/01-pascoa.jpg",
-          "link": "https://www.festcakes.com.br/search?term=P%C3%A1scoa&utm_source=site&utm_medium=banner&utm_campaign=01-pascoa",
-          "alt": "300"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/valentinebrinde.jpg",
-          "link": "https://www.festcakes.com.br/search?term=bwb&utm_source=site&utm_medium=banner&utm_campaign=valentinebrinde",
-          "alt": "316"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/04-pascoa.jpg",
-          "link": "https://www.festcakes.com.br/search?term=forma+acetato&utm_source=site&utm_medium=banner&utm_campaign=04-pascoa-forma-acetato",
-          "alt": "305"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/valentine.jpg",
-          "link": "https://www.festcakes.com.br/pk/aplique-te-amo-modelo-2-mdf-glitter-vermelho-sonho-fino?utm_source=site&utm_medium=banner&utm_campaign=valentine",
-          "alt": "317"
+          "img": "/img/uploads/wine_2025_jul_bnr_institucional_web_03.jpg"
         }
       ]
     },
@@ -59,16 +28,16 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/600x200.svg"
+          "img": "/img/uploads/wine_2025_bnr_categorias_web_vtinto.jpg"
         },
         {
-          "img": "/img/uploads/600x200.svg"
+          "img": "/img/uploads/wine_2025_bnr_categorias_web_vrose.jpg"
         },
         {
-          "img": "/img/uploads/600x200.svg"
+          "img": "/img/uploads/wine_2025_bnr_categorias_web_vespumante.jpg"
         },
         {
-          "img": "/img/uploads/600x200.svg"
+          "img": "/img/uploads/wine_2025_bnr_categorias_web_vbranco.jpg"
         }
       ]
     },
@@ -78,14 +47,8 @@
       "limit": 12,
       "page": 1,
       "grid_type": "Comum",
-      "collection_id": "681e02fa578b5f795411f762:collections:Ofertas:/p/ofertas"
-    },
-    {
-      "type": "brands-carousel",
-      "limit": 24,
-      "offset": 0,
-      "autoplay": 5000,
-      "sort": null
+      "collection_id": "681e02fa578b5f795411f762:collections:Ofertas:/p/ofertas",
+      "sort": "slug"
     },
     {
       "bg_color": "#722858",
@@ -130,10 +93,10 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/600x200.svg"
+          "img": "/img/uploads/wine_2025_jul_bnr_destaques_botticelli.jpg"
         },
         {
-          "img": "/img/uploads/600x200.svg"
+          "img": "/img/uploads/wine_2025_jul_bnr_destaques_terraustral.jpg"
         }
       ]
     },

@@ -1527,3 +1527,147 @@ header #filterShop2{display:none!important}
     margin: 0 auto;
   }
 }
+
+// Age Verification Popup Styles
+
+  .age-verification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+  }
+
+  .age-verification-modal {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s ease-out;
+  }
+
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8) translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .age-verification-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .welcome-text {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .wine-logo {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 10px 0;
+  }
+
+  .progress-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+  }
+
+  .progress-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .progress-dot.active {
+    background-color: #28a745;
+  }
+
+  .progress-line {
+    width: 40px;
+    height: 2px;
+    background: repeating-linear-gradient(
+      to right,
+      #e0e0e0 0,
+      #e0e0e0 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+
+  .age-verification-content h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .mandatory-text {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .age-verification-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .age-verification-buttons .btn {
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+  }
+
+  /* Prevent scrolling when popup is active */
+  body.age-verification-active {
+    overflow: hidden;
+  }
+
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .age-verification-modal {
+      padding: 30px 20px;
+      margin: 20px;
+    }
+    
+    .age-verification-content h2 {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+    
+    .age-verification-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .age-verification-buttons .btn {
+      width: 100%;
+      padding: 15px 20px;
+    }
+  }

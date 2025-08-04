@@ -15,6 +15,22 @@
     data-cms-collection="<%= _.route.collection %>"
   <% } %>
 >
+  <!-- Age Verification Popup -->
+  <div id="age-verification-popup" class="age-verification-overlay" style="display: none;">
+    <div class="age-verification-modal">
+      <div class="age-verification-content">
+        <p class="welcome-text">Boas-vindas à</p>
+        <img src="/img/uploads/festwine.png" class="px-5" alt=""> 
+        <h2>Você tem mais de 18 anos?</h2>
+        <small class="mandatory-text">(Obrigatório)</small>
+        <div class="age-verification-buttons">
+          <button id="age-no" href="https://festpan.com/" class="btn">Não</button>
+          <button id="age-yes" class="btn btn-primary">Sim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <%- await include('@/layout/menu') %>
 
   
