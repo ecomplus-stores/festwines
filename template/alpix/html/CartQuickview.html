@@ -1,4 +1,4 @@
-<!-- filepath: c:\DevBox\festwines\template\alpix\html\CartQuickview.html -->
+
 <div>
 <div 
     class="offcanvas-backdrop fade" 
@@ -85,13 +85,13 @@
       </p>
       
       <div class="box-btn">
-        <a-link
+        <button
           class="tf-btn btn-gray"
           role="button"
-          :href="cartUrl"
+          @click.prevent="toggle"
         >
           <span class="text-white">Continuar Comprando</span>
-        </a-link>
+        </button>
         
         <a-link
           class="tf-btn"
